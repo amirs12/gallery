@@ -1,56 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import { Button, Layout } from 'antd';
+import { ImagesList } from './components/ImagesList/ImagesList';
+import { AddImage } from './components/AddImage/AddImage';
+import { PictureOutlined } from '@ant-design/icons';
+import 'antd/dist/reset.css';
 import './App.css';
 
-function App() {
+const { Header, Content, Footer } = Layout;
+
+const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+      <Layout>
+        <Header
+          style={{
+            position: 'sticky',
+            top: 0,
+            zIndex: 1,
+            width: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}
+        >
+          <div className="logo-wrapper">
+            <PictureOutlined className="logo-icon" />
+            <span className="logo-text">Snappery</span>
+          </div>
+          <AddImage />
+        </Header>
+        <Content className="site-layout" style={{ padding: '0 50px' }}>
+          <ImagesList />
+        </Content>
+        <Footer style={{ textAlign: 'center' }}>
+          <Button type="primary">View More</Button>
+        </Footer>
+      </Layout>
     </div>
   );
 }

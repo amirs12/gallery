@@ -1,0 +1,8 @@
+.gallery-title {
+  font-size: 2.3rem;
+  margin: 0 0 30px;
+}
+
+.gallery-title + .ant-space {
+  justify-content: center;
+}
