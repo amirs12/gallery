@@ -1,0 +1,15 @@
+@media only screen and (max-width: 600px) {
+  .add-image-text {
+    display: none !important;
+  }
+
+  .add-image-container > .ant-btn {
+    width: 30px;
+    height: 26px;
+    padding: 0;
+  }
+
+  .add-image-container > .ant-btn > .ant-btn-icon {
+    margin-inline-end: 0 !important;
+  }
+}

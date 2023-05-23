@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { ImageCardProps } from './types';
-import { Divider, Image } from 'antd';
+import { Divider, Image, Tooltip } from 'antd';
 import {
   DeleteOutlined,
   EditOutlined,
-  StarFilled,
+  InfoCircleFilled,
   StarOutlined,
 } from '@ant-design/icons';
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
@@ -17,7 +17,7 @@ export const ImageCard: React.FC<ImageCardProps> = ({ description, id, isFavorit
   const imagesList = useAppSelector(selectImagesList);
   const dispatch = useAppDispatch();
 
-  const deleteImage = () => { // todo - modal - "are you sure?""
+  const deleteImage = () => {
     const newList = imagesList.filter(image => image.id !== id);
     dispatch(updateImagesList(newList));
   }
@@ -25,18 +25,6 @@ export const ImageCard: React.FC<ImageCardProps> = ({ description, id, isFavorit
   const editImage = () => {
     setIsModalOpen(true);
   };
-
-  // todo - delete
-  // const toggleIsFavorite = () => {
-  //   const newList = imagesList.map((image) => {
-  //     if (image.id === id) {
-  //       return {...image, isFavorite: !image.isFavorite};
-  //     } else {
-  //       return image;
-  //     }
-  //   })
-  //   dispatch(updateImagesList(newList));
-  // }
 
   return (
     <div className='card-container'>
@@ -48,18 +36,20 @@ export const ImageCard: React.FC<ImageCardProps> = ({ description, id, isFavorit
           src={url}
           width={240}
         />
-        <div className='card-star'>
-          {/* <button className='card-star-bg' onClick={toggleIsFavorite}>
-            {isFavorite ? (
-              <StarFilled />
-            ) : (
-              <StarOutlined />
-            )}
-          </button> */}
+        <div className='card-symbol'>
           {isFavorite && (
-            <div className='card-star-bg'>
-              <StarFilled />
+            <div className='card-symbol-bg'>
+              <StarOutlined />
             </div>
+          )}
+        </div>
+        <div className='card-symbol card-symbol-left'>
+          {description && (
+            <Tooltip title={description}>
+              <div className='card-symbol-bg'>
+                <InfoCircleFilled />
+              </div>
+            </Tooltip>
           )}
         </div>
       </div>

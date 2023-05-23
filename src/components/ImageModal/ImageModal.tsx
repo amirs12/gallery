@@ -58,7 +58,7 @@ export const ImageModal: React.FC<ImageModalProps> = ({ description, id, isFavor
         preview={false}
         rootClassName="edit-modal-image"
         src={url}
-        width={471} // todo - mobile
+        width={471}
       />
       <TextArea
         allowClear={true}

@@ -3,6 +3,7 @@ import { Button, Checkbox, Modal, Input } from 'antd';
 import { PlusSquareOutlined } from '@ant-design/icons';
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import { selectImagesList, updateImagesList } from '../../features/gallery/gallerySlice';
+import './AddImage.css';
 
 export const AddImage: React.FC = () => {
   const [imageUrl, setImageUrl] = useState('');
@@ -36,14 +37,14 @@ export const AddImage: React.FC = () => {
   };
 
   return (
-    <div className="add-image-container">
+    <div className='add-image-container'>
       <Button
         icon={<PlusSquareOutlined />}
         onClick={() => setIsModalOpen(true)}
         style={{ backgroundColor: '#e6f4fd' }}
         type="default"
       >
-        Add Image
+        <span className='add-image-text'>Add Image</span>
       </Button>
 
       <Modal

@@ -14,7 +14,7 @@ export const ImagesList: React.FC = () => {
   useEffect(() => {
     fetchImages().then(res => {
       const newList = [...images, ...res].filter((element, index) => {
-        return [...images, ...res].indexOf(element) === index; // todo - check array of obj
+        return [...images, ...res].indexOf(element) === index;
       });
       dispatch(updateImagesList(newList));
       setImages(newList);

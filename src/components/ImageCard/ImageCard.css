@@ -12,7 +12,7 @@
   object-fit: cover;
 }
 
-.card-star {
+.card-symbol {
   position: absolute;
   top: 0;
   right: 0;
@@ -22,16 +22,24 @@
   color: #fff;
 }
 
-.card-star-bg {
-  all: unset;
+.card-symbol-bg {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 24px;
   height: 24px;
   border-radius: 6px;
-  background-color: rgba(0, 0, 0, 0.1);
-  /* cursor: pointer; */
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.card-symbol-bg svg {
+  width: 15px;
+  height: 15px;
+}
+
+.card-symbol-left {
+  left: 0;
+  right: unset;
 }
 
 .card-actions {

@@ -1,7 +1,8 @@
 import React from 'react';
-import { Button, Layout } from 'antd';
+import { Layout } from 'antd';
 import { ImagesList } from './components/ImagesList/ImagesList';
 import { AddImage } from './components/AddImage/AddImage';
+import { ViewMoreBtn } from './components/ViewMoreBtn/ViewMoreBtn';
 import { PictureOutlined } from '@ant-design/icons';
 import 'antd/dist/reset.css';
 import './App.css';
@@ -33,7 +34,7 @@ const App: React.FC = () => {
           <ImagesList />
         </Content>
         <Footer style={{ textAlign: 'center' }}>
-          <Button type="primary">View More</Button>
+          <ViewMoreBtn />
         </Footer>
       </Layout>
     </div>

@@ -28,3 +28,23 @@
   font-size: 1.5rem;
   font-weight: 600;
 }
+
+@media only screen and (max-width: 652px) {
+  .ant-layout-header {
+    padding-inline: 20px;
+  }
+
+  .ant-layout-content {
+    padding: 0 20px !important;
+  }
+
+  .logo-icon {
+    width: 30px;
+    height: 26px;
+  }
+
+  .logo-icon > svg {
+    width: 17px;
+    height: 17px;
+  }
+}
