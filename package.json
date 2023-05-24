@@ -33,7 +33,7 @@
       "react-app/jest"
     ]
   },
-  "homepage": "https://amirs12.github.io/gallery",
+  "homepage": "https://amirs12.github.io/gallery-as",
   "browserslist": {
     "production": [
       ">0.2%",
