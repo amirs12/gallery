@@ -1,6 +1,7 @@
 {
   "name": "gallery-as",
   "version": "0.1.0",
+  "homepage": "https://amirs12.github.io/gallery-as",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^5.1.0",
@@ -33,7 +34,6 @@
       "react-app/jest"
     ]
   },
-  "homepage": "https://amirs12.github.io/gallery-as",
   "browserslist": {
     "production": [
       ">0.2%",
