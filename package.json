@@ -13,6 +13,7 @@
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
     "antd": "^5.5.0",
+    "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
@@ -32,6 +33,7 @@
       "react-app/jest"
     ]
   },
+  "homepage": "https://amirs12.github.io/gallery",
   "browserslist": {
     "production": [
       ">0.2%",
